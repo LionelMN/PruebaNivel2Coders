@@ -10,6 +10,7 @@ import { MovieListComponent } from './views/movie-list/movie-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { MovieDetailsComponent } from './views/movie-details/movie-details.component';
+import { SearchbarComponent } from './components/searchbar/searchbar.component';
 
 
 
@@ -18,7 +19,8 @@ import { MovieDetailsComponent } from './views/movie-details/movie-details.compo
     AppComponent,
     NavbarComponent,
     MovieListComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    SearchbarComponent
   ],
   imports: [
     BrowserModule,

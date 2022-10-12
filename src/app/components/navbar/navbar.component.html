@@ -1,7 +1,4 @@
 <div class="navbar">
-  <img src="" alt="logo">
-  <div class="searchbar">
-    <input type="text" name="searchbarInput" placeholder="Search a movie" [(ngModel)]="searchedMovie" (keydown.enter)="logv(searchedMovie)">
-    <button (click)="logv(searchedMovie)">Search</button>
-  </div>
+  <p routerLink="">The Movie Database</p>
+  <app-searchbar></app-searchbar>
 </div>
