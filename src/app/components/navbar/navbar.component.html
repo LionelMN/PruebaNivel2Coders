@@ -1,0 +1,7 @@
+<div class="navbar">
+  <img src="" alt="logo">
+  <div class="searchbar">
+    <input type="text" name="searchbarInput" placeholder="Search a movie" [(ngModel)]="searchedMovie" (keydown.enter)="logv(searchedMovie)">
+    <button (click)="logv(searchedMovie)">Search</button>
+  </div>
+</div>
