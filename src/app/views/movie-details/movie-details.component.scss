@@ -45,3 +45,32 @@
     }
   }
 }
+
+@media (max-width: 400px) {
+
+  .movieDetailContainer{
+
+    .movieDetailCard{
+
+      .card__header{
+        display: block;
+        img{
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+
+      .companies{
+        display: block;
+        justify-content: space-around;
+
+        div{
+
+          img{
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
+}
