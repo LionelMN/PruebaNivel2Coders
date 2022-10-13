@@ -1,0 +1,47 @@
+.movieDetailContainer{
+  padding: 1.5rem;
+  .movieDetailCard{
+    background: white;
+    width: 70%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 15px;
+
+    .card__header{
+      display: grid;
+
+      .mainInfo{
+        grid-column: 1 / 3;
+        grid-row: 1;
+      }
+
+      img{
+        grid-column: 4;
+        grid-row: 1 / 5;
+        width: 500px;
+      }
+
+      .otherInfo{
+        grid-column: 1;
+        grid-row: 2;
+      }
+    }
+
+    .companies{
+      display: grid;
+      justify-content: space-around;
+      h2{
+        grid-column: 1 / 5;
+        grid-row: 1;
+        justify-self: center;
+      }
+      div{
+        text-align: center;
+        align-self: baseline;
+        img{
+          width: 100px;
+        }
+      }
+    }
+  }
+}
