@@ -1,0 +1,39 @@
+<div class="movieDetailContainer" style="
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(https://image.tmdb.org/t/p/original/{{movie?.backdrop_path}});
+">
+  <div class="movieDetailCard">
+    <div class="card__header">
+      <div class="mainInfo">
+        <h1>{{movie?.title}}</h1>
+        <p>{{movie?.overview}}</p>
+      </div>
+      <img src="https://image.tmdb.org/t/p/original/{{movie?.poster_path}}" [alt]="movie?.title">
+      <div class="otherInfo">
+        <p>Public: <span *ngIf="movie?.adult">Adult</span><span *ngIf="!movie?.adult">all ages</span></p>
+        <div>
+          <p>Genres:</p>
+          <ul>
+            <li *ngFor="let genre of movie?.genres">{{genre.name}}</li>
+          </ul>
+        </div>
+        <p>Original language: {{movie?.original_language}} </p>
+        <p>Release date: {{movie?.release_date}} </p>
+        <p>Popularity: {{movie?.popularity}}</p>
+        <a [href]="movie?.homepage" target="_blank">Oficial website</a>
+        <p>
+          <a routerLink="">Return to list</a>
+        </p>
+      </div>
+    </div>
+    <div class="companies">
+      <h2>Companies</h2>
+      <div *ngFor="let company of movie?.production_companies">
+        <img src="https://image.tmdb.org/t/p/original/{{company.logo_path}}" [alt]="company.name">
+        <p>{{company.name}}</p>
+      </div>
+    </div>
+  </div>
+</div>

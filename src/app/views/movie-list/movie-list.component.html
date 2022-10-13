@@ -1,0 +1,17 @@
+<main class="movieListContainer">
+  <h1>Top trendy movies</h1>
+  <div class="movieList">
+    <div class="movieCard"
+    *ngFor="let movie of movies | paginate: { itemsPerPage: 10, currentPage: page }"
+    routerLink="/movies/{{movie.id}}">
+      <h3> {{movie?.title}} </h3>
+      <img src="https://image.tmdb.org/t/p/original/{{movie?.poster_path}}" [alt]="movie?.title">
+      <hr>
+      <b>Release date:</b> {{movie?.release_date}}
+      <b>Popularity:</b> {{movie?.popularity}}
+    </div>
+  </div>
+  <div class="paginationControls">
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
+  </div>
+</main>

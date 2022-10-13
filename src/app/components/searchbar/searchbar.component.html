@@ -1,0 +1,20 @@
+<div class="searchbar">
+  <input
+    type="text"
+    name="searchbarInput"
+    placeholder="Search a movie"
+    [(ngModel)]="searchedMovie"
+    (focus)="onActivateSearch()"
+    (focusout)="onDeactivateSearch()"
+    (ngModelChange)="filterItems(searchedMovie)"
+  >
+
+  <div class="predictiveSearch" *ngIf="isSearchActive">
+    <div class="predictive-options">
+      <span *ngFor="let movie of filteredMovies" (click)="selectSuggestion(movie.title)" (click)="reloadPage(movie.id.toString())">
+        {{movie.title}}
+      </span>
+    </div>
+  </div>
+
+</div>

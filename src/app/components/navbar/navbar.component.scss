@@ -1,0 +1,12 @@
+.navbar{
+  background: var(--second-bg-color);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+
+  p{
+    cursor: pointer;
+  }
+}
