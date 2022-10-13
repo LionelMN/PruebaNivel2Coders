@@ -4,12 +4,10 @@
     name="searchbarInput"
     placeholder="Search a movie"
     [(ngModel)]="searchedMovie"
-    (keydown.enter)="logv(searchedMovie)"
     (focus)="onActivateSearch()"
     (focusout)="onDeactivateSearch()"
     (ngModelChange)="filterItems(searchedMovie)"
   >
-  <button (click)="logv(searchedMovie)">Search</button>
 
   <div class="predictiveSearch" *ngIf="isSearchActive">
     <div class="predictive-options">

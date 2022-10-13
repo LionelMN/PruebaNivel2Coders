@@ -48,10 +48,6 @@ export class SearchbarComponent implements OnInit {
       this.filteredMovies = this.allMovies.filter( movies => movies.title.includes(movie));
   }
 
-  logv = (movie : string) => {
-    console.log(movie);
-  }
-
   selectSuggestion(suggestedOption : string) {
     this.searchedMovie = suggestedOption;
   }
